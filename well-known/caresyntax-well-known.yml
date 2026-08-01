@@ -1,0 +1,49 @@
+generated: '2026-08-01'
+method: probed
+source: live GET of /.well-known/* on every Caresyntax host found in apis.yml + DNS enumeration
+summary:
+  documents_found: 0
+  note: 'No /.well-known/ document was served by any Caresyntax host. The marketing
+    site (caresyntax.com / www.caresyntax.com, Vercel) answers automated requests
+    with a "Vercel Security Checkpoint" bot challenge — HTTP 429 for HTML paths and
+    HTTP 403 for /.well-known/* paths — so no well-known document could be retrieved
+    there; the block is observable and is recorded here rather than treated as an
+    absence. The API host (api.caresyntax.com, Kong 3.4.2) answers every path with
+    a genuine HTTP 404 "no Route matched with those values", which IS a real absence.'
+hosts:
+- host: https://www.caresyntax.com
+  platform: Vercel (Astro) — bot-challenge gated
+  documents:
+  - {path: /.well-known/security.txt, status: 403, file: null}
+  - {path: /.well-known/openid-configuration, status: 403, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 403, file: null}
+  - {path: /.well-known/api-catalog, status: 403, file: null}
+  - {path: /.well-known/agent-card.json, status: 403, file: null}
+  - {path: /.well-known/agent.json, status: 403, file: null}
+  - {path: /llms.txt, status: 429, file: null}
+- host: https://caresyntax.com
+  platform: Vercel (Astro) — bot-challenge gated
+  documents:
+  - {path: /.well-known/security.txt, status: 403, file: null}
+  - {path: /.well-known/agent-card.json, status: 403, file: null}
+  - {path: /.well-known/agent.json, status: 403, file: null}
+  - {path: /.well-known/api-catalog, status: 403, file: null}
+  - {path: /llms.txt, status: 429, file: null}
+- host: https://api.caresyntax.com
+  platform: Kong 3.4.2 API gateway
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+- host: https://partners.caresyntax.com
+  platform: unknown (mod_security style filter — HTTP 406 on every path)
+  documents:
+  - {path: /.well-known/security.txt, status: 406, file: null}
+  - {path: /.well-known/agent-card.json, status: 406, file: null}
+  - {path: /.well-known/agent.json, status: 406, file: null}
+x-evidence:
+  fetched: '2026-08-01'
+  user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0
+  hosts_enumerated_via: dig (api, www, apex, partners, learn, platform)

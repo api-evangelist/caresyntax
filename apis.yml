@@ -1,17 +1,39 @@
 aid: caresyntax
 name: Caresyntax
-description: 'Caresyntax is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Caresyntax is a surgical intelligence company that builds a vendor-neutral,
+  enterprise-scale data platform for the operating room. Founded in 2013 in Berlin
+  and now dual-headquartered in Berlin and San Francisco, it captures video, audio,
+  image, device, EMR, financial and outcomes data from inside and around the OR and
+  applies AI analytics to it — delivering pre-operative workflow optimization, real-time
+  intraoperative decision support, and post-operative clinical safety, quality and
+  utilization insights. The platform pairs the PRIME365 vendor-neutral OR / medical-device
+  integration layer with the qvident surgical performance-management and analytics
+  suite, and is deployed in more than 4,000 operating rooms worldwide. Caresyntax sells
+  to hospitals and surgery centers, MedTech manufacturers and insurers, and integrates
+  with EMR, PACS and scheduling systems. It operates an API gateway at api.caresyntax.com,
+  but publishes no public developer portal, API documentation, SDKs or machine-readable
+  API contract — integration is delivered through enterprise and partner engagements.'
+image: https://avatars.githubusercontent.com/u/162725444?v=4
 url: https://raw.githubusercontent.com/api-evangelist/caresyntax/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Healthcare
+- Surgery
+- Surgical Intelligence
+- Operating Room
+- Medical Devices
+- MedTech
+- Analytics
+- Artificial Intelligence
+- Health Data
+- Interoperability
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/caresyntax-domain-security.yml
 - type: Website
+  url: https://www.caresyntax.com/
+- type: About
+  url: https://www.caresyntax.com/about
+- type: Platform
+  name: Caresyntax surgical intelligence platform
+  url: https://caresyntax.com/platform/
+- type: Products
+  name: Connected Surgery
+  url: https://caresyntax.com/our-platform/connected-surgery/
+- type: Blog
+  url: https://www.caresyntax.com/blog
+- type: News
+  url: https://www.caresyntax.com/news
+- type: Support
+  name: Technical Support
+  url: https://caresyntax.com/support/
+- type: ContactUs
+  url: https://www.caresyntax.com/contact-us
+- type: Partners
+  url: https://caresyntax.com/about/partners/
+- type: Team
+  url: https://caresyntax.com/about/our-team/
+- type: UserManuals
+  name: Product user manuals
+  url: https://caresyntax.com/resources-archive/user-manuals/
+- type: Podcast
+  name: Data Nerds in the OR
+  url: https://caresyntax.com/resources/podcasts
+- type: PrivacyPolicy
+  url: https://www.caresyntax.com/privacy-policy
+- type: TermsOfService
+  name: Standard Terms and Conditions of Business (PDF)
+  url: https://caresyntax.com/wp-content/uploads/2023/11/Caresyntax_AGB_EN_2021-01-12.pdf
+- type: Compliance
+  name: GDPR / data protection compliance
+  url: https://caresyntax.com/gdpr/
+- type: Conformance
+  url: conformance/caresyntax-conformance.yml
+- type: GitHubOrganization
+  url: https://github.com/caresyntax
+- type: LinkedIn
+  url: https://www.linkedin.com/company/caresyntax
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/caresyntax
+- type: Profile
+  name: Forge Global secondary-market listing
   url: https://forgeglobal.com/caresyntax_stock/
+- type: LLMsTxt
+  url: llms/caresyntax-llms.txt
+x-enrichment:
+  date: '2026-08-01'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

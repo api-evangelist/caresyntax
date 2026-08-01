@@ -1,0 +1,57 @@
+# Caresyntax
+
+> Caresyntax is a surgical intelligence company that builds a vendor-neutral, enterprise-scale data platform for the operating room. Founded in 2013 in Berlin and dual-headquartered in Berlin and San Francisco, it captures video, audio, image, device, EMR, financial and outcomes data from inside and around the OR and applies AI analytics to it — pre-operative workflow optimization, real-time intraoperative decision support, and post-operative clinical safety, quality and utilization insights. Its PRIME365 layer handles vendor-neutral OR / medical-device integration; its qvident suite handles surgical performance management and analytics. Deployed in more than 4,000 operating rooms worldwide.
+
+## API surface
+
+Caresyntax publishes **no public API**. There is no developer portal, no API reference,
+no OpenAPI/AsyncAPI/GraphQL contract, no SDKs, no CLI, no MCP server and no A2A agent
+card. An API gateway is live at `https://api.caresyntax.com` (Kong 3.4.2) but every
+probed path returns `404 {"message":"no Route matched with those values"}` — it carries
+no publicly routed endpoint. Integration with the platform (EMR, PACS, scheduling
+systems, OR devices) is delivered through enterprise and partner engagements rather
+than a self-serve developer program.
+
+## Platform
+
+- [Caresyntax platform](https://caresyntax.com/platform/): Vendor-neutral enterprise surgery platform
+- [Connected Surgery](https://caresyntax.com/our-platform/connected-surgery/): Next-generation OR-integration solution
+- [Who we serve](https://caresyntax.com/who-we-serve/): Hospitals and surgery centers, perioperative leaders, MedTech, insurers
+- [Partners](https://caresyntax.com/about/partners/): Partner and MedTech ecosystem
+
+## Docs
+
+- [Product user manuals](https://caresyntax.com/resources-archive/user-manuals/): Published device/product documentation
+- [Technical Support](https://caresyntax.com/support/): Support channels, 6am–8pm EST (US) and 08:00–17:00 CET (EU), Mon–Fri
+- [Contact](https://www.caresyntax.com/contact-us)
+
+## Company
+
+- [About](https://www.caresyntax.com/about)
+- [Leadership team](https://caresyntax.com/about/our-team/)
+- [Patient Safety Organization (PSO)](https://caresyntax.com/about/patient-safety-organization/): AHRQ-listed PSO
+- [News](https://www.caresyntax.com/news)
+- [Blog](https://www.caresyntax.com/blog)
+- [Data Nerds in the OR podcast](https://caresyntax.com/resources/podcasts)
+- [GitHub organization](https://github.com/caresyntax): exists, no public repositories
+- [LinkedIn](https://www.linkedin.com/company/caresyntax)
+
+## Legal and compliance
+
+- [Privacy Policy](https://www.caresyntax.com/privacy-policy): GDPR, HIPAA and HITECH compliance statements
+- [GDPR](https://caresyntax.com/gdpr/)
+- [Standard Terms and Conditions of Business (PDF)](https://caresyntax.com/wp-content/uploads/2023/11/Caresyntax_AGB_EN_2021-01-12.pdf)
+
+## API Evangelist artifacts
+
+- [conformance/caresyntax-conformance.yml](conformance/caresyntax-conformance.yml): regulatory/standards posture
+- [security/caresyntax-domain-security.yml](security/caresyntax-domain-security.yml): TLS/HSTS/DNS probe results
+- [well-known/caresyntax-well-known.yml](well-known/caresyntax-well-known.yml): /.well-known/ probe record
+
+<!--
+generated: '2026-08-01'
+method: generated
+source: apis.yml + repo artifacts (no /llms.txt published by the provider; /llms.txt
+  returned HTTP 429 from the Vercel bot challenge on both caresyntax.com and
+  www.caresyntax.com)
+-->

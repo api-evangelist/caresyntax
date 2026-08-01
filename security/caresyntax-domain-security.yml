@@ -1,0 +1,24 @@
+generated: '2026-08-01'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.caresyntax.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  7 00:02:30 2026 GMT
+  hsts: null
+- host: api.caresyntax.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 28 23:59:59 2027 GMT
+  hsts: null
+  note: 'Kong 3.4.2 API gateway (CNAME api.new.caresyntax.com); every probed path
+    returns HTTP 404 {"message":"no Route matched with those values"} — no public
+    route, no spec, no /.well-known/ documents.'
+domains:
+- domain: caresyntax.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
