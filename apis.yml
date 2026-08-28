@@ -13,6 +13,17 @@ description: 'Caresyntax is a surgical intelligence company that builds a vendor
   with EMR, PACS and scheduling systems. It operates an API gateway at api.caresyntax.com,
   but publishes no public developer portal, API documentation, SDKs or machine-readable
   API contract — integration is delivered through enterprise and partner engagements.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/162725444?v=4
 url: https://raw.githubusercontent.com/api-evangelist/caresyntax/refs/heads/main/apis.yml
 x-type: company
