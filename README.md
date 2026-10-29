@@ -64,38 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Caresyntax is a surgical intelligence company that builds a vendor-neutral, enterprise-scale
-data platform for the operating room. Founded in 2013 in Berlin and dual-headquartered in
-Berlin and San Francisco, it captures video, audio, image, device, EMR, financial and outcomes
-data from inside and around the OR and applies AI analytics to it — pre-operative workflow
-optimization, real-time intraoperative decision support, and post-operative clinical safety,
-quality and utilization insights. The platform pairs the PRIME365 vendor-neutral OR /
-medical-device integration layer with the qvident surgical performance-management and analytics
-suite, and is deployed in more than 4,000 operating rooms worldwide.
+Caresyntax is a surgical intelligence company that builds a vendor-neutral, enterprise-scale data platform for the operating room. Founded in 2013 in Berlin and now dual-headquartered in Berlin and San Francisco, it captures video, audio, image, device, EMR, financial and outcomes data from inside and around the OR and applies AI analytics to it — delivering pre-operative workflow optimization, real-time intraoperative decision support, and post-operative clinical safety, quality and utilization insights. The platform pairs the PRIME365 vendor-neutral OR / medical-device integration layer with the qvident surgical performance-management and analytics suite, and is deployed in more than 4,000 operating rooms worldwide. Caresyntax sells to hospitals and surgery centers, MedTech manufacturers and insurers, and integrates with EMR, PACS and scheduling systems. It operates an API gateway at api.caresyntax.com, but publishes no public developer portal, API documentation, SDKs or machine-readable API contract — integration is delivered through enterprise and partner engagements.
 
-- https://www.caresyntax.com/
-- https://caresyntax.com/platform/
-- https://github.com/caresyntax (no public repositories)
+**Areas:** Company · Healthcare · Surgery · Surgical Intelligence · Operating Room · Medical Devices · Medical Technology · Analytics · Artificial Intelligence · Health Data · Interoperability
 
-## API surface
+## Caresyntax on APIs.io
 
-**No public API.** Enrichment on 2026-08-01 found no developer portal, API reference, OpenAPI /
-AsyncAPI / GraphQL contract, SDK, CLI, MCP server or A2A agent card on any Caresyntax host.
-An API gateway is live at `api.caresyntax.com` (Kong 3.4.2, CNAME `api.new.caresyntax.com`),
-but every probed path — including `/openapi.json`, `/swagger.json`, `/graphql`, `/fhir`,
-`/mcp` and all `/.well-known/*` paths — returns
-`404 {"message":"no Route matched with those values"}`. Integration is delivered through
-enterprise and partner engagements, not a self-serve developer program.
+Everything profiled for Caresyntax is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/caresyntax/](https://apis.io/providers/caresyntax/)** — or go straight to one of the APIs or properties below.
 
-The marketing site sits behind a Vercel bot challenge (HTTP 403 on `/.well-known/*`, HTTP 429
-on HTML paths) for automated fetches; that block is recorded in
-`well-known/caresyntax-well-known.yml` rather than being treated as an absence.
+### Published properties
 
-## Artifacts
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Artifact | File | Method |
-|---|---|---|
-| Conformance | `conformance/caresyntax-conformance.yml` | searched |
-| Domain security | `security/caresyntax-domain-security.yml` | probed |
-| Well-known probe record | `well-known/caresyntax-well-known.yml` | probed |
-| llms.txt | `llms/caresyntax-llms.txt` | generated |
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Caresyntax Domain Security](https://apis.io/security/caresyntax/caresyntax-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.caresyntax.com/)
+- [Support](https://caresyntax.com/support/)
+- [Blog](https://www.caresyntax.com/blog)
+- [Compliance](https://caresyntax.com/gdpr/)
+- [Terms of service](https://caresyntax.com/wp-content/uploads/2023/11/Caresyntax_AGB_EN_2021-01-12.pdf)
+- [Privacy policy](https://www.caresyntax.com/privacy-policy)
+- [GitHub](https://github.com/caresyntax)
+
+## API Evangelist rating
+
+**Kin Score 14.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 6.0 |
+| Access clarity | 23.7 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.2** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/caresyntax/](https://apis.io/providers/caresyntax/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Caresyntax: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/caresyntax/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
